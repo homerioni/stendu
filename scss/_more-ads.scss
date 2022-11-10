@@ -1,0 +1,32 @@
+.more-ads {
+  margin-bottom: 16rem;
+
+  &__title {
+    margin-bottom: 6rem;
+    font-weight: 700;
+    font-size: 5.5rem;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5rem;
+  }
+}
+
+@media (max-width: 48em) {
+  .more-ads {
+    margin-bottom: 12rem;
+
+    &__title {
+      margin-bottom: 5rem;
+      font-size: 6rem;
+    }
+
+    &__list {
+      justify-content: space-between;
+      gap: 0;
+      row-gap: 4rem;
+    }
+  }
+}
