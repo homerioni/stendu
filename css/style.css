@@ -1537,9 +1537,14 @@
   padding: 0 5rem 0 2.5rem;
   border-radius: 100rem;
   border: none;
+  outline: none;
   background-color: #EEF0FC;
   font-weight: 700;
   font-size: 1.6rem;
+  cursor: pointer;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
 }
 .new-ad__input-box > .nice-select {
   display: -webkit-box;
@@ -1663,6 +1668,9 @@
   gap: 3rem;
 }
 .new-ad__flex-25 {
+  -webkit-box-flex: 22%;
+      -ms-flex: 22%;
+          flex: 22%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1674,9 +1682,12 @@
       -ms-flex-pack: end;
           justify-content: flex-end;
   height: auto;
-  width: 24rem;
+  max-width: 24.4rem;
 }
 .new-ad__flex-33 {
+  -webkit-box-flex: 30%;
+      -ms-flex: 30%;
+          flex: 30%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1688,9 +1699,12 @@
       -ms-flex-pack: end;
           justify-content: flex-end;
   height: auto;
-  width: 33rem;
+  max-width: 33.5rem;
 }
 .new-ad__flex-50 {
+  -webkit-box-flex: 45%;
+      -ms-flex: 45%;
+          flex: 45%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1702,9 +1716,12 @@
       -ms-flex-pack: end;
           justify-content: flex-end;
   height: auto;
-  width: 51.5rem;
+  max-width: 51.8rem;
 }
 .new-ad__flex-66 {
+  -webkit-box-flex: 63%;
+      -ms-flex: 63%;
+          flex: 63%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1716,9 +1733,12 @@
       -ms-flex-pack: end;
           justify-content: flex-end;
   height: auto;
-  width: 69.2rem;
+  max-width: 70rem;
 }
 .new-ad__flex-full {
+  -webkit-box-flex: 100%;
+      -ms-flex: 100%;
+          flex: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1731,7 +1751,6 @@
           justify-content: flex-end;
   height: auto;
   width: 100%;
-  margin-right: 1rem;
 }
 .new-ad__form-footer {
   display: -webkit-box;

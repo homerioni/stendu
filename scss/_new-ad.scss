@@ -510,9 +510,12 @@
       padding: 0 5rem 0 2.5rem;
       border-radius: 100rem;
       border: none;
+      outline: none;
       background-color: #EEF0FC;
       font-weight: 700;
       font-size: 1.6rem;
+      cursor: pointer;
+      appearance: none;
     }
 
     > .nice-select {
@@ -619,44 +622,48 @@
   }
 
   &__flex-25 {
+    flex: 22%;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     height: auto;
-    width: 24rem;
+    max-width: 24.4rem;
   }
 
   &__flex-33 {
+    flex: 30%;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     height: auto;
-    width: 33rem;
+    max-width: 33.5rem;
   }
 
   &__flex-50 {
+    flex: 45%;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     height: auto;
-    width: 51.5rem;
+    max-width: 51.8rem;
   }
 
   &__flex-66 {
+    flex: 63%;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     height: auto;
-    width: 69.2rem;
+    max-width: 70rem;
   }
 
   &__flex-full {
+    flex: 100%;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     height: auto;
     width: 100%;
-    margin-right: 1rem;
   }
 
   &__form-footer {
