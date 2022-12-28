@@ -13,8 +13,8 @@ $(document).ready(function () {
     });
 
     // New ads
-    $('.mask-gosnomer').mask('a  999  a a');
-    $('.mask-vin').mask('999');
+    $('.mask-gosnomer').length ? $('.mask-gosnomer').mask('a  999  a a') : false;
+    $('.mask-vin').length ? $('.mask-vin').mask('999') : false;
     $('.new-ad__radio input').change(function () {
         $(this).parents('.new-ad__radio-box').find('.new-ad__radio').removeClass('active');
         $(this).parent().addClass('active');
@@ -29,6 +29,12 @@ $(document).ready(function () {
     $('.contacts-ad__radio-label input').change(function () {
         $('.contacts-ad__radio-label.active').removeClass('active');
         $(this).parent().addClass('active');
+    });
+    $('.photo-ad__del').click(function () {
+        $(this).parents('.photo-ad__photo-item').remove();
+    });
+    $('.photo-ad__photo-list').sortable({
+        items: '.photo-ad__photo-item:not(:last-child)'
     });
 
 });

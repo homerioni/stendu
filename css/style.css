@@ -2728,6 +2728,26 @@ body.lock {
   .mobile {
     display: none;
   }
+  .admin-st__card-info {
+    -webkit-box-flex: 1;
+        -ms-flex: auto;
+            flex: auto;
+    margin-right: 4rem;
+  }
+  .admin-st__card-right {
+    padding-right: 4.5rem;
+  }
+  .admin-st__card-btns {
+    -webkit-box-flex: 0;
+        -ms-flex: none;
+            flex: none;
+  }
+  .admin-st__card-statistics {
+    -webkit-box-flex: 0;
+        -ms-flex: none;
+            flex: none;
+    width: 14rem;
+  }
 }
 @media (max-width: 48em) {
   .desktop {
