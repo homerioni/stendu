@@ -9,6 +9,50 @@ body.lock {
   overflow: hidden;
 }
 
+.announcements__select {
+  position: relative;
+  z-index: 5;
+  min-width: 28rem;
+  width: fit-content;
+}
+
+.announcements__select > input {
+  display: none;
+}
+
+.announcements__select:after {
+  transition: transform .4s ease;
+}
+
+.announcements__select.active:after {
+  transform: scaleY(-1) translateY(50%);
+}
+
+.announcements__select .select-text {
+  font-weight: 600;
+}
+
+.announcements__select-list {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 3rem;
+  z-index: -1;
+  width: 100%;
+  padding: 3rem 2.8rem 0.8rem 2.8rem;
+  border-radius: 0 0 3rem 3rem;
+  background: white;
+}
+
+.announcements__select-list-item:hover,
+.announcements__select-list-item.active {
+  font-weight: 600;
+}
+
+.card__information {
+  margin: 0 auto 5rem;
+}
+
 @media (min-width: 48.01em) {
   .mobile {
     display: none;

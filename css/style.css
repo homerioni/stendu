@@ -294,6 +294,7 @@
 }
 .resume__desc-box {
   padding: 6rem;
+  margin-bottom: 5rem;
   border-radius: 3rem;
   background-color: white;
 }
@@ -373,6 +374,9 @@
 .resume__btn-icon > svg path {
   stroke: white;
 }
+.resume__map-box {
+  margin-bottom: 5rem;
+}
 .resume__map-title-box {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -429,7 +433,6 @@
   display: block;
 }
 .resume__map {
-  display: none;
   margin-top: 5rem;
 }
 .resume__footer {
@@ -2853,6 +2856,56 @@
 }
 body.lock {
   overflow: hidden;
+}
+
+.announcements__select {
+  position: relative;
+  z-index: 5;
+  min-width: 28rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.announcements__select > input {
+  display: none;
+}
+
+.announcements__select:after {
+  -webkit-transition: -webkit-transform 0.4s ease;
+  transition: -webkit-transform 0.4s ease;
+  transition: transform 0.4s ease;
+  transition: transform 0.4s ease, -webkit-transform 0.4s ease;
+}
+
+.announcements__select.active:after {
+  -webkit-transform: scaleY(-1) translateY(50%);
+          transform: scaleY(-1) translateY(50%);
+}
+
+.announcements__select .select-text {
+  font-weight: 600;
+}
+
+.announcements__select-list {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 3rem;
+  z-index: -1;
+  width: 100%;
+  padding: 3rem 2.8rem 0.8rem 2.8rem;
+  border-radius: 0 0 3rem 3rem;
+  background: white;
+}
+
+.announcements__select-list-item:hover,
+.announcements__select-list-item.active {
+  font-weight: 600;
+}
+
+.card__information {
+  margin: 0 auto 5rem;
 }
 
 @media (min-width: 48.01em) {

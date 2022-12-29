@@ -10,13 +10,53 @@
     <link rel="stylesheet" href="css/nice-select.css">
     <link rel="stylesheet" href="css/style.min.css">
     <link rel="stylesheet" href="css/dev.css">
-    <link rel="stylesheet" href="css/add.css">
+    <link rel="stylesheet" href="http://stendu.fixmaski.ru/local/templates/stendu/css/add.css">
     <link rel="stylesheet" href="css/main.2949322f.css">
     <link rel="stylesheet" href="css/style.css">
 
     <style>
         main {
             margin: 10rem;
+        }
+
+        .announcements__select {
+            position: relative;
+            z-index: 5;
+            min-width: 28rem;
+            width: fit-content;
+        }
+
+        .announcements__select > input {
+            display: none;
+        }
+
+        .announcements__select:after {
+            transition: transform .4s ease;
+        }
+
+        .announcements__select.active:after {
+            transform: scaleY(-1) translateY(50%);
+        }
+
+        .announcements__select .select-text {
+            font-weight: 600;
+        }
+
+        .announcements__select-list {
+            display: none;
+            position: absolute;
+            left: 0;
+            top: 3rem;
+            z-index: -1;
+            width: 100%;
+            padding: 3rem 2.8rem 0.8rem 2.8rem;
+            border-radius: 0 0 3rem 3rem;
+            background: white;
+        }
+
+        .announcements__select-list-item:hover,
+        .announcements__select-list-item.active {
+            font-weight: 600;
         }
     </style>
 </head>
@@ -77,6 +117,25 @@
     </div>
 </main>
 
+<main>
+    <div class="announcements__select">
+        <span>Дата: </span>
+        <span class="select-text">За всё время</span>
+        <input class="select-input" type="text">
+        <ul class="announcements__select-list">
+            <li data-value="" class="announcements__select-list-item active">
+                За всё время
+            </li>
+            <li data-value="asc" class="announcements__select-list-item">
+                Сначала новые
+            </li>
+            <li data-value="desc" class="announcements__select-list-item">
+                Сначала старые
+            </li>
+        </ul>
+    </div>
+</main>
+
 
 <script src="js/jquery-3.6.0.min.js"></script>
 <script src="js/swiper-bundle.min.js"></script>
@@ -84,5 +143,22 @@
 <script src="js/jquery-ui.min.js"></script>
 <script src="js/swiper.js"></script>
 <script src="js/main.js"></script>
+<script>
+    $('.announcements__select').click(function () {
+        if ($(this).find('.announcements__select-list').hasClass('active')) {
+            $(this).find('.announcements__select-list').removeClass('active').slideUp();
+        } else {
+            $('.announcements__select-list.active').removeClass('active').slideUp();
+            $(this).find('.announcements__select-list').addClass('active').slideDown();
+        }
+    });
+    $('.announcements__select-list-item').click(function () {
+        $('.select-input').val()
+        $(this).parents('.announcements__select').find('.select-text').html($(this).html()).siblings('.select-input').val($(this).data('value'));
+        $(this).siblings('.announcements__select-list-item').removeClass('active');
+        $(this).addClass('active');
+        $(".select-input").trigger('change');
+    });
+</script>
 </body>
 </html>

@@ -259,6 +259,7 @@
 
   &__desc-box {
     padding: 6rem;
+    margin-bottom: 5rem;
     border-radius: 3rem;
     background-color: white;
   }
@@ -342,6 +343,7 @@
   }
 
   &__map-box {
+    margin-bottom: 5rem;
   }
 
   &__map-title-box {
@@ -403,7 +405,6 @@
   }
 
   &__map {
-    display: none;
     margin-top: 5rem;
   }
 
